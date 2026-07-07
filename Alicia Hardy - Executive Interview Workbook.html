@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alicia R. Hardy | Executive Clinical Pharmacist Interview Workbook</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#182420; --paper:#f7f2e4; --panel:#fffdf8;
+  --teal:#0e3733; --teal-deep:#082623; --teal-mid:#1b5850;
+  --amber:#bd7a35; --amber-light:#e7b374; --amber-pale:#f7e6c9;
+  --sage:#eef1e6; --line:#e2ddc7; --line-2:#d8e2da; --muted:#697a6f;
+  --rose:#9c4a3a; --green:#3d7350;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#e7e1d0;font-family:'IBM Plex Sans',Arial,sans-serif;color:var(--ink);line-height:1.62}
+a{color:inherit}
+.mono{font-family:'IBM Plex Mono',monospace}
+
+/* layout */
+.shell{display:grid;grid-template-columns:272px minmax(0,1fr);max-width:1440px;margin:0 auto}
+.sidebar{position:sticky;top:0;height:100vh;background:var(--teal-deep);color:#fdf9ee;padding:26px 20px;overflow:auto;border-right:1px solid rgba(0,0,0,.25)}
+.rx-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-light);opacity:.85}
+.brandmark{border:1px solid rgba(231,179,116,.35);border-radius:4px;padding:18px 16px;background:rgba(231,179,116,.06);margin-bottom:26px;position:relative}
+.brandmark:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;background:var(--amber)}
+.brandmark h2{font-family:'Fraunces',serif;font-weight:600;margin:9px 0 3px;font-size:25px;line-height:1.05;letter-spacing:-.01em}
+.brandmark p{margin:0;color:rgba(253,249,238,.68);font-size:12.5px;font-family:'IBM Plex Mono',monospace;letter-spacing:.02em}
+.nav{margin-top:4px}
+.nav a{display:flex;gap:10px;align-items:baseline;text-decoration:none;padding:9px 10px;border-radius:3px;color:rgba(253,249,238,.72);font-size:13px;font-weight:500;border-left:2px solid transparent}
+.nav a .code{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--amber-light);opacity:.9;min-width:20px}
+.nav a:hover{background:rgba(231,179,116,.09);color:#fff;border-left-color:var(--amber)}
+.side-note{margin-top:22px;padding:14px 15px;border-radius:3px;background:rgba(253,249,238,.05);border:1px solid rgba(253,249,238,.14);font-size:12px;color:rgba(253,249,238,.68);line-height:1.55}
+.side-note b{color:var(--amber-light)}
+
+.main{padding:26px}
+.page{background:var(--panel);border-radius:6px;box-shadow:0 30px 70px rgba(8,20,18,.22);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
+
+/* hero — styled as a clinical label / chart header */
+.hero{position:relative;background:linear-gradient(160deg,var(--teal-deep),var(--teal) 62%,#0c332f);color:#fdf9ee;padding:0}
+.chart-strip{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid rgba(253,249,238,.14);font-family:'IBM Plex Mono',monospace;font-size:11.5px}
+.chart-field{padding:12px 22px;border-right:1px solid rgba(253,249,238,.14);color:rgba(253,249,238,.62)}
+.chart-field b{display:block;color:var(--amber-light);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px;font-weight:600}
+.chart-field span{color:#fdf9ee;font-size:12.5px}
+.hero-body{padding:50px 56px 44px}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid rgba(231,179,116,.45);padding:7px 13px;border-radius:2px;text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:600;color:var(--amber-light);font-family:'IBM Plex Mono',monospace}
+h1{font-family:'Fraunces',serif;font-weight:600;font-style:italic;font-size:clamp(36px,5vw,58px);line-height:1.04;margin:20px 0 16px;letter-spacing:-.01em;max-width:820px}
+.hero .sub{max-width:700px;font-size:16.5px;color:rgba(253,249,238,.82);margin:0}
+.hero .sub b{color:#fff;font-style:normal}
+
+.ekg{display:block;width:100%;height:46px;margin-top:34px}
+.ekg path{fill:none;stroke:var(--amber);stroke-width:1.6;opacity:.85}
+.ekg .grid{stroke:rgba(253,249,238,.08);stroke-width:1}
+
+.vitals{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(253,249,238,.14)}
+.vital{padding:22px 24px;border-right:1px solid rgba(253,249,238,.14)}
+.vital:last-child{border-right:0}
+.vital b{display:block;font-family:'Fraunces',serif;color:var(--amber-light);font-size:26px;font-weight:600;margin-bottom:3px}
+.vital span{font-size:11.5px;color:rgba(253,249,238,.66);font-family:'IBM Plex Mono',monospace;letter-spacing:.02em}
+
+/* content */
+.content{padding:44px 56px 12px}
+.section{margin:0 0 30px;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#fff}
+.section-head{padding:19px 24px;background:var(--sage);border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:14px}
+.section-head .code{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--amber);background:var(--amber-pale);border:1px solid #e6cd9e;padding:4px 8px;border-radius:2px;font-weight:600;letter-spacing:.04em;white-space:nowrap}
+.section-head h2{font-family:'Fraunces',serif;font-size:25px;line-height:1.1;margin:0;color:var(--teal-deep);font-weight:600}
+.section-head p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+.body{padding:24px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{border:1px solid var(--line-2);background:#fbfcfa;border-radius:4px;padding:18px}
+.card h3{margin:0 0 9px;color:var(--teal-mid);font-size:15.5px;font-family:'Fraunces',serif;font-weight:600}
+.card p{margin:0 0 9px}
+.pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.pill{background:var(--sage);color:var(--teal-mid);border:1px solid var(--line-2);border-radius:2px;padding:6px 10px;font-size:11.5px;font-weight:600;font-family:'IBM Plex Mono',monospace}
+.goldpill{background:var(--amber-pale);color:#7a521f;border-color:#e6cd9e}
+
+.script{background:var(--paper);border-left:3px solid var(--amber);border-radius:2px;padding:18px 20px;margin:10px 0;font-size:14.5px;font-style:italic;color:#2a352f}
+.script:before{content:"\201C";font-family:'Fraunces',serif;font-style:normal;color:var(--amber);font-size:22px;margin-right:2px}
+
+.callout{background:linear-gradient(135deg,var(--amber-pale),var(--sage));border:1px solid #e6cd9e;border-radius:4px;padding:18px 20px}
+.question{padding:17px 0;border-bottom:1px dashed var(--line-2)}
+.question:last-child{border-bottom:0}
+.question strong{color:var(--teal-deep);display:block;margin-bottom:4px;font-family:'Fraunces',serif;font-size:16px;font-weight:600}
+.why{color:var(--muted);font-size:12.5px;font-family:'IBM Plex Mono',monospace}
+.response{margin-top:10px;background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
+.tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--teal-mid);font-family:'IBM Plex Mono',monospace}
+
+.story{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:start;padding:12px 0;border-bottom:1px solid #eef2ec}
+.story:last-child{border-bottom:0}
+.story b{color:var(--amber);font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-family:'IBM Plex Mono',monospace}
+
+.check label{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #eef2ec;font-size:14px}
+.check label:last-child{border-bottom:0}
+input[type="checkbox"]{transform:scale(1.05);margin-top:4px;accent-color:var(--teal-mid)}
+textarea{width:100%;min-height:96px;border:1px solid var(--line-2);border-radius:4px;padding:12px;font-family:'IBM Plex Sans',Arial,sans-serif;font-size:14px;resize:vertical;background:var(--paper)}
+
+.job{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;border:1px solid var(--line-2);border-radius:4px;padding:17px 18px;background:#fbfcfa;margin-bottom:12px}
+.job h3{margin:0 0 4px;color:var(--teal-deep);font-family:'Fraunces',serif;font-size:16.5px;font-weight:600}
+.job .meta{color:var(--muted);font-size:12.5px;margin-bottom:7px;font-family:'IBM Plex Mono',monospace}
+.btn{display:inline-block;text-decoration:none;background:var(--teal-deep);color:#fdf9ee;border-radius:2px;padding:10px 16px;font-weight:600;font-size:12.5px;white-space:nowrap;font-family:'IBM Plex Mono',monospace;letter-spacing:.02em}
+.btn.gold{background:var(--amber);color:#221708}
+
+.mini-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.mini-table th,.mini-table td{border-bottom:1px solid #e9e4d4;text-align:left;padding:11px;vertical-align:top}
+.mini-table th{color:var(--teal-deep);background:var(--sage);font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+
+.footer{background:var(--teal-deep);color:rgba(253,249,238,.7);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 56px;font-size:12.5px;font-family:'IBM Plex Mono',monospace}
+.footer b{color:var(--amber-light)}
+
+.printbar{position:fixed;right:22px;bottom:22px;z-index:20}
+.printbar button{border:0;background:var(--amber);color:#221708;border-radius:2px;padding:13px 18px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.24);cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.03em;font-size:12.5px}
+
+.accent{color:var(--amber);font-weight:700}
+.red{color:var(--rose);font-weight:700}
+.green{color:var(--green);font-weight:700}
+.toc-print{display:none}
+
+@media(max-width:980px){
+  .shell{display:block}
+  .sidebar{position:relative;height:auto}
+  .main{padding:14px}
+  .hero-body,.content,.footer{padding-left:26px;padding-right:26px}
+  .vitals,.grid2,.grid3{grid-template-columns:1fr}
+  .vital{border-right:0;border-bottom:1px solid rgba(253,249,238,.14)}
+  .job{grid-template-columns:1fr}
+  .story{grid-template-columns:1fr}
+  .chart-field{flex:1 1 50%;border-bottom:1px solid rgba(253,249,238,.14)}
+}
+@media print{
+  body{background:white}
+  .shell{display:block}
+  .sidebar,.printbar{display:none}
+  .main{padding:0}
+  .page{box-shadow:none;border-radius:0;border:0}
+  .hero-body{padding:30px 30px 24px}
+  .content{padding:22px}
+  .section{break-inside:avoid}
+  .toc-print{display:block}
+  .job{break-inside:avoid}
+  .btn{border:1px solid #111;background:white;color:#111}
+  .footer{padding:18px 30px}
+  .ekg{height:30px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="rx-tag">Executive Interview Workbook</div>
+    <div class="brandmark">
+      <h2>Alicia R. Hardy</h2>
+      <p>Pharm.D. &middot; BC-ADM &middot; CDCES</p>
+    </div>
+    <nav class="nav">
+      <a href="#brand"><span class="code mono">01</span> Professional Brand</a>
+      <a href="#prescreen"><span class="code mono">02</span> Prescreen Strategy</a>
+      <a href="#intro"><span class="code mono">03</span> Interview Introductions</a>
+      <a href="#strengths"><span class="code mono">04</span> Proof Points</a>
+      <a href="#questions"><span class="code mono">05</span> Interview Answer Bank</a>
+      <a href="#clinical"><span class="code mono">06</span> Clinical Case Prep</a>
+      <a href="#leadership"><span class="code mono">07</span> Leadership Prep</a>
+      <a href="#salary"><span class="code mono">08</span> Salary + Schedule</a>
+      <a href="#jobs"><span class="code mono">09</span> Curated Roles</a>
+      <a href="#cheat"><span class="code mono">10</span> Day-Of Cheat Sheet</a>
+    </nav>
+    <div class="side-note">Built for two upcoming prescreen interviews, and reusable for <b>senior pharmacist</b>, <b>ambulatory care</b>, <b>telehealth</b>, <b>diabetes</b>, and <b>clinical leadership</b> opportunities.</div>
+  </aside>
+
+  <main class="main">
+    <div class="page">
+      <section class="hero">
+        <div class="chart-strip">
+          <div class="chart-field"><b>Prepared For</b><span>Alicia R. Hardy</span></div>
+          <div class="chart-field"><b>Credential</b><span>Pharm.D., BC-ADM, CDCES</span></div>
+          <div class="chart-field"><b>Purpose</b><span>Rush Prescreen + Executive Prep</span></div>
+          <div class="chart-field"><b>Status</b><span>Ready for review</span></div>
+        </div>
+        <div class="hero-body">
+          <div class="eyebrow">&#9877; Clinical Pharmacist &middot; Interview Readiness</div>
+          <h1>Executive Interview Workbook</h1>
+          <p class="sub">Prepared to help <b>Alicia R. Hardy</b> communicate senior-level clinical judgment, telehealth leadership, diabetes expertise, medication safety, and patient-centered impact with clarity and confidence.</p>
+
+          <svg class="ekg" viewBox="0 0 900 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <line class="grid" x1="0" y1="23" x2="900" y2="23"/>
+            <path d="M0,23 L260,23 L278,23 L288,6 L300,40 L312,14 L324,23 L340,23 L640,23 L658,23 L668,6 L680,40 L692,14 L704,23 L720,23 L900,23"/>
+          </svg>
+
+          <div class="vitals">
+            <div class="vital"><b>20+</b><span>Years pharmacy experience</span></div>
+            <div class="vital"><b>5,000+</b><span>Clinical pharmacy encounters</span></div>
+            <div class="vital"><b>70%+</b><span>Reduced avoidable ED admissions, telehealth</span></div>
+            <div class="vital"><b>BC-ADM</b><span>Board-certified advanced diabetes mgmt.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <section id="brand" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;01</span><div><h2>Alicia&rsquo;s Professional Brand</h2><p>Lead with authority. Alicia is not just qualified&mdash;she is clinically seasoned, credentialed, and leadership-ready.</p></div></div>
+          <div class="body grid2">
+            <div class="card">
+              <h3>Positioning Statement</h3>
+              <div class="script">Alicia R. Hardy is a residency-trained Clinical Pharmacist Practitioner and Clinical Pharmacy Program Manager with deep expertise in diabetes care, anticoagulation, ambulatory care, telehealth medication management, interdisciplinary collaboration, pharmacy education, and medication safety. She brings the clinical credibility of a provider, the operational discipline of a program manager, and the patient-centered communication style needed in high-trust pharmacy environments.</div>
+              <div class="pillrow"><span class="pill goldpill">Clinical Pharmacy Practitioner</span><span class="pill goldpill">Program Manager</span><span class="pill goldpill">Diabetes Expert</span><span class="pill goldpill">Telehealth Leader</span></div>
+            </div>
+            <div class="card">
+              <h3>What Recruiters Should Remember</h3>
+              <ul>
+                <li>She has direct clinical practice experience under collaborative practice agreements.</li>
+                <li>She has led training/orientation support for pharmacists and technicians.</li>
+                <li>She has strong diabetes, endocrinology, anticoagulation, ambulatory care, and telehealth credibility.</li>
+                <li>She can operate independently while collaborating effectively with physicians, nurses, case managers, and pharmacy teams.</li>
+                <li>She is board-certified, licensed in Florida, and comfortable with quality review, EMR templates, and process improvement.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="prescreen" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;02</span><div><h2>Prescreen Interview Strategy</h2><p>The prescreen is not the full interview. It is the gatekeeper conversation.</p></div></div>
+          <div class="body grid3">
+            <div class="card"><h3>Goal</h3><p>Move Alicia from recruiter screen to hiring manager, clinical lead, or panel interview.</p></div>
+            <div class="card"><h3>Tone</h3><p>Calm, concise, clinically credible, flexible, and selective. No overexplaining.</p></div>
+            <div class="card"><h3>Primary Message</h3><p>&ldquo;I bring senior-level clinical judgment, patient safety discipline, and the ability to contribute quickly.&rdquo;</p></div>
+          </div>
+          <div class="body" style="padding-top:0">
+            <div class="callout"><b>Do not undersell her.</b> For part-time or PRN roles, Alicia should not sound like she is simply looking for extra hours. She should sound like a senior pharmacist offering high-value coverage, clinical judgment, and reliable execution.</div>
+          </div>
+        </section>
+
+        <section id="intro" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;03</span><div><h2>Interview Introductions</h2><p>Practice each version out loud. Use the shorter version for recruiter screens and the longer version for hiring managers.</p></div></div>
+          <div class="body">
+            <div class="card"><span class="tag">30 seconds</span><div class="script">I&rsquo;m a Clinical Pharmacist Practitioner and Program Manager with extensive VA experience in ambulatory care, diabetes management, anticoagulation, telehealth pharmacy services, medication safety, and interdisciplinary patient care. I&rsquo;m board-certified in advanced diabetes management and certified as a diabetes care and education specialist. I&rsquo;m interested in this role because I can bring strong clinical judgment, reliable coverage, and patient-centered pharmacy care to your team.</div></div>
+            <div class="card"><span class="tag">60 seconds</span><div class="script">My background is in clinical pharmacy practice, ambulatory care, telehealth medication management, diabetes and endocrine care, anticoagulation, and pharmacy program leadership. In my current work, I support pharmacist and technician training, quality review, EMR process development, and direct patient care in a remote clinical setting. Earlier in my career, I managed anticoagulation patients, supported transitions of care, rounded with interdisciplinary teams, performed medication reconciliation, and provided diabetes education. What I bring is a combination of clinical autonomy, medication safety focus, teaching experience, and the ability to work well across providers, nurses, patients, and pharmacy operations.</div></div>
+            <div class="card"><span class="tag">2 minutes</span><div class="script">I&rsquo;ve spent my career building strong clinical pharmacy expertise across ambulatory care, inpatient support, diabetes and endocrine management, anticoagulation, medication safety, telehealth, and pharmacy education. I completed a PGY-1 Pharmacy Practice residency and have practiced as a Clinical Pharmacist Practitioner under collaborative practice agreements, which has allowed me to initiate, modify, and discontinue medication therapy using evidence-based guidelines. In my current program manager role with the VISN 8 Virtual Medical Center, I support clinical pharmacy operations, orientation and training, quality assessment, EMR template development, and telehealth patient triage. I&rsquo;ve also precepted students and residents, supported pharmacy education, and worked closely with physicians, nurse practitioners, nurses, case managers, and patients. I&rsquo;m now looking for a part-time or PRN opportunity where I can contribute at a high level, bring reliable clinical support, and help strengthen patient care and medication safety.</div></div>
+          </div>
+        </section>
+
+        <section id="strengths" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;04</span><div><h2>Alicia&rsquo;s Proof Points</h2><p>These are the accomplishments to weave into answers without sounding rehearsed.</p></div></div>
+          <div class="body">
+            <table class="mini-table"><thead><tr><th>Theme</th><th>What Alicia Should Emphasize</th><th>Interview Language</th></tr></thead><tbody>
+              <tr><td>Telehealth Leadership</td><td>Direct care in a remote telehealth setting, patient triage, QA review, reduced unnecessary ED admissions.</td><td>&ldquo;I&rsquo;m comfortable making safe, evidence-based decisions in remote care environments while knowing when escalation is appropriate.&rdquo;</td></tr>
+              <tr><td>Diabetes Expertise</td><td>BC-ADM, CDCES, diabetes/endocrinology clinic, medication optimization, patient education.</td><td>&ldquo;Diabetes care is one of my strongest clinical areas, especially patient education and therapy optimization.&rdquo;</td></tr>
+              <tr><td>Anticoagulation</td><td>5,000+ clinical pharmacy encounters, safety-focused therapy plans, transitions of care.</td><td>&ldquo;I&rsquo;m highly attentive to risk, monitoring, and coordination when managing anticoagulation therapy.&rdquo;</td></tr>
+              <tr><td>Interdisciplinary Practice</td><td>Collaboration with physicians, NPs, nurses, case managers, and specialty providers.</td><td>&ldquo;I communicate in a way that supports provider trust and keeps the patient at the center.&rdquo;</td></tr>
+              <tr><td>Training + Precepting</td><td>Training pharmacists/technicians, precepting APPE students and PGY-1 residents.</td><td>&ldquo;I enjoy teaching, coaching, and helping pharmacy teams build consistent clinical practice habits.&rdquo;</td></tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section id="questions" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;05</span><div><h2>Interview Answer Bank</h2><p>Use these for recruiter screens, hiring manager conversations, and clinical panels.</p></div></div>
+          <div class="body">
+            <div class="question"><strong>Why are you interested in this part-time or PRN role?</strong><div class="why">They are checking motivation, availability, and seriousness.</div><div class="response">&ldquo;I&rsquo;m interested because the role aligns with my clinical pharmacy background and allows me to contribute in a focused way. I bring experience in medication safety, direct patient care, telehealth, ambulatory care, diabetes, anticoagulation, and interdisciplinary collaboration. I&rsquo;m looking for a role where I can be reliable, clinically useful quickly, and supportive to the broader pharmacy team.&rdquo;</div></div>
+            <div class="question"><strong>What makes you a strong fit for this position?</strong><div class="why">They want your value in one clear answer.</div><div class="response">&ldquo;My strength is the combination of clinical depth and operational maturity. I&rsquo;ve practiced under collaborative agreements, managed complex chronic disease medication therapy, supported telehealth triage, trained pharmacy team members, and participated in quality review. I can contribute clinically while also understanding workflow, documentation, teamwork, and patient safety.&rdquo;</div></div>
+            <div class="question"><strong>Tell me about your clinical pharmacy experience.</strong><div class="response">&ldquo;My clinical pharmacy experience includes ambulatory care, diabetes and endocrine management, anticoagulation, inpatient medication management, transitions of care, renal dosing, high-risk medication monitoring, medication reconciliation, formulary review, and telehealth patient care. I&rsquo;ve worked directly with providers, nurses, case managers, patients, students, residents, and pharmacy staff.&rdquo;</div></div>
+            <div class="question"><strong>How do you handle a medication safety concern?</strong><div class="response">&ldquo;I verify the issue first, assess patient-specific risk, review the medication profile, labs, indication, dosing, interactions, allergies, and timing. Then I communicate the concern clearly to the provider or care team with a recommendation, document appropriately, and follow through until the concern is resolved.&rdquo;</div></div>
+            <div class="question"><strong>How do you work with difficult providers or team members?</strong><div class="response">&ldquo;I stay focused on the patient and the clinical facts. I try to understand the concern, present my recommendation respectfully, and explain the safety or guideline rationale behind it. My goal is not to win an argument&mdash;it is to support the safest and most appropriate plan for the patient.&rdquo;</div></div>
+            <div class="question"><strong>What is your approach to patient education?</strong><div class="response">&ldquo;I meet patients where they are. I use plain language, check understanding, connect the medication plan to the patient&rsquo;s daily life, and focus on adherence barriers, side effects, monitoring, and when to seek help. My diabetes education background has strengthened how I communicate complex information clearly.&rdquo;</div></div>
+            <div class="question"><strong>How do you prioritize when multiple issues need attention?</strong><div class="response">&ldquo;I prioritize based on patient safety, clinical urgency, regulatory requirements, and operational impact. High-risk medications, abnormal labs, transitions of care, anticoagulation concerns, renal dosing, and urgent provider questions move to the top. I also communicate status early so the team knows what is being handled.&rdquo;</div></div>
+          </div>
+        </section>
+
+        <section id="clinical" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;06</span><div><h2>Clinical Case Prep</h2><p>These are not scripts to memorize. They are frameworks for clinical thinking.</p></div></div>
+          <div class="body grid2">
+            <div class="card"><h3>Warfarin / Elevated INR</h3><p><b>Approach:</b> Assess INR value, bleeding symptoms, indication, goal range, recent dose changes, interacting meds, diet changes, adherence, illness, alcohol use, and follow protocol. Communicate plan and monitoring schedule.</p></div>
+            <div class="card"><h3>Renal Dose Adjustment</h3><p><b>Approach:</b> Verify renal function, age/weight, CrCl/eGFR, indication, drug-specific guidance, current dose, toxicity risk, and alternatives. Recommend adjusted dosing and monitoring.</p></div>
+            <div class="card"><h3>Diabetes Optimization</h3><p><b>Approach:</b> Review A1c, glucose trends, renal function, comorbidities, hypoglycemia risk, adherence, lifestyle, affordability, and guideline-aligned therapy options.</p></div>
+            <div class="card"><h3>Medication Reconciliation</h3><p><b>Approach:</b> Compare home meds, inpatient orders, discharge plan, duplications, omissions, contraindications, high-risk meds, patient understanding, and follow-up needs.</p></div>
+            <div class="card"><h3>Telehealth Triage</h3><p><b>Approach:</b> Identify urgency, verify symptoms, medication risk, red flags, current therapy, patient safety needs, and whether escalation to ED, urgent care, provider, or pharmacy follow-up is needed.</p></div>
+            <div class="card"><h3>Polypharmacy Concern</h3><p><b>Approach:</b> Review indication, duplications, drug-drug/drug-disease interactions, anticholinergic burden, fall risk, adherence, adverse effects, and deprescribing opportunities.</p></div>
+          </div>
+        </section>
+
+        <section id="leadership" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;07</span><div><h2>Leadership + Program Management Prep</h2><p>Alicia should not hide her leadership. It differentiates her from standard PRN candidates.</p></div></div>
+          <div class="body">
+            <div class="story"><b>Situation</b><span>Telehealth pharmacy service needed consistent orientation, templates, QA review, and patient triage support.</span></div>
+            <div class="story"><b>Task</b><span>Alicia supported pharmacist/technician training, EMR templates, peer-to-peer review, QA processes, and clinical interventions.</span></div>
+            <div class="story"><b>Action</b><span>She collaborated with physicians, nurse practitioners, urgent care, internal medicine, and emergency medicine stakeholders to optimize medication management.</span></div>
+            <div class="story"><b>Result</b><span>Improved clinical flow, supported safe telehealth pharmacy operations, maintained patient access, and contributed to reduced unnecessary ED admissions.</span></div>
+            <div class="callout" style="margin-top:16px"><b>Best leadership line:</b> &ldquo;Even in a part-time or PRN role, I bring a program-minded approach. I pay attention to safety, workflow, communication, documentation, and follow-through.&rdquo;</div>
+          </div>
+        </section>
+
+        <section id="salary" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;08</span><div><h2>Salary + Schedule Scripts</h2><p>Strong but not rigid. Flexible but not cheap.</p></div></div>
+          <div class="body grid2">
+            <div class="card"><h3>Salary Expectations</h3><div class="script">I&rsquo;m open to discussing compensation based on the schedule, clinical expectations, patient population, and level of responsibility. Do you have an approved range for this part-time or PRN role?</div><p class="red">Avoid saying &ldquo;I&rsquo;m flexible&rdquo; by itself.</p></div>
+            <div class="card"><h3>Availability</h3><div class="script">I can provide consistent availability for the right part-time or PRN opportunity. I&rsquo;d like to understand the expected shifts, weekend or holiday needs, and how far in advance scheduling is typically confirmed.</div></div>
+            <div class="card"><h3>If They Push for a Number</h3><div class="script">Based on my clinical background, board certification, and experience level, I&rsquo;d want to be aligned with the responsibilities and market range for an experienced clinical pharmacist. I&rsquo;m happy to discuss once I understand the role details.</div></div>
+            <div class="card"><h3>Closing the Prescreen</h3><div class="script">Based on what you&rsquo;ve shared, I&rsquo;m very interested. My background in clinical pharmacy practice, diabetes management, telehealth, medication safety, and interdisciplinary care feels strongly aligned. What are the next steps in the process?</div></div>
+          </div>
+        </section>
+
+        <section id="jobs" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;09</span><div><h2>Curated Roles for Alicia to View</h2><p>These were selected because they match Alicia&rsquo;s clinical depth, Florida location, part-time/PRN interest, and specialty background.</p></div></div>
+          <div class="body">
+            <div class="job"><div><h3>Clinical Pharmacist, Part-Time Days &mdash; Orlando Health</h3><div class="meta">Clermont, FL &nbsp;&middot;&nbsp; Part-time &nbsp;&middot;&nbsp; Reported salary range: $90,300.37&ndash;$137,241.73/year</div><p>Closest high-fit role for Alicia&rsquo;s hospital, ambulatory care, medication safety, and Florida clinical pharmacist background.</p></div><a class="btn gold" href="https://to.indeed.com/aakjr2lgdspp" target="_blank" rel="noopener">View Role</a></div>
+            <div class="job"><div><h3>Clinical Pharmacist &mdash; Brixey & Meyer / Capstone Vital Care</h3><div class="meta">Orlando, FL &nbsp;&middot;&nbsp; Part-time &nbsp;&middot;&nbsp; From $55/hour</div><p>Home infusion and specialty pharmacy opportunity that may align with Alicia&rsquo;s patient management, clinical review, and interdisciplinary communication skills.</p></div><a class="btn" href="https://to.indeed.com/aandtdjl8r6p" target="_blank" rel="noopener">View Role</a></div>
+            <div class="job"><div><h3>Senior Oncology Clinical Pharmacist &mdash; McKesson</h3><div class="meta">Florida &nbsp;&middot;&nbsp; Part-time &nbsp;&middot;&nbsp; Reported salary range: $106,900&ndash;$178,100/year</div><p>Senior-level part-time option for an experienced clinical pharmacist who can speak to specialty care, medication safety, and provider collaboration.</p></div><a class="btn" href="https://to.indeed.com/aaw9zrkjm2d8" target="_blank" rel="noopener">View Role</a></div>
+            <div class="job"><div><h3>Clinical Pharmacist &mdash; HCA Florida St. Lucie Hospital</h3><div class="meta">Port Saint Lucie, FL &nbsp;&middot;&nbsp; Part-time &nbsp;&middot;&nbsp; Reported salary range: $127,135.02&ndash;$155,959.38/year</div><p>Hospital-based clinical pharmacist role for Alicia to consider if she is open to broader Florida opportunities beyond Orlando.</p></div><a class="btn" href="https://to.indeed.com/aaqrktpz2779" target="_blank" rel="noopener">View Role</a></div>
+            <div class="job"><div><h3>Clinical Pharmacist - Hospital Care at Home &mdash; Cleveland Clinic</h3><div class="meta">Vero Beach, FL &nbsp;&middot;&nbsp; Part-time &nbsp;&middot;&nbsp; Sign-on bonus noted</div><p>Strong conceptual fit for Alicia&rsquo;s telehealth, remote care, triage, and patient safety experience.</p></div><a class="btn" href="https://to.indeed.com/aaksml6ng9zx" target="_blank" rel="noopener">View Role</a></div>
+          </div>
+        </section>
+
+        <section id="cheat" class="section">
+          <div class="section-head"><span class="code mono">RX&middot;10</span><div><h2>Day-Of Interview Cheat Sheet</h2><p>Keep this open during the prescreen. It is okay to glance at notes.</p></div></div>
+          <div class="body grid2">
+            <div class="card check"><h3>Before Each Call</h3>
+              <label><input type="checkbox"> Review the specific role and location.</label>
+              <label><input type="checkbox"> Confirm availability language.</label>
+              <label><input type="checkbox"> Practice 30-second intro once.</label>
+              <label><input type="checkbox"> Have salary script nearby.</label>
+              <label><input type="checkbox"> Prepare 2 questions for the recruiter.</label>
+            </div>
+            <div class="card"><h3>Three Questions to Ask</h3><ol><li>&ldquo;What clinical areas would this pharmacist support most often?&rdquo;</li><li>&ldquo;What does the typical part-time or PRN schedule look like?&rdquo;</li><li>&ldquo;What would make someone successful in this role during the first 90 days?&rdquo;</li></ol></div>
+            <div class="card"><h3>Words to Use</h3><div class="pillrow"><span class="pill">medication safety</span><span class="pill">clinical judgment</span><span class="pill">collaborative practice</span><span class="pill">patient-centered</span><span class="pill">telehealth triage</span><span class="pill">diabetes management</span><span class="pill">interdisciplinary care</span></div></div>
+            <div class="card"><h3>Words to Avoid</h3><p><span class="red">Avoid:</span> &ldquo;I&rsquo;m just looking for part-time.&rdquo; &ldquo;I&rsquo;m flexible on pay.&rdquo; &ldquo;I&rsquo;ve mostly been at the VA.&rdquo; &ldquo;I haven&rsquo;t done that in a while.&rdquo;</p><p><span class="green">Replace with:</span> &ldquo;I&rsquo;m looking for the right part-time/PRN role where I can contribute meaningfully and reliably.&rdquo;</p></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span class="code mono">&mdash;</span><div><h2>Notes for Alicia</h2><p>Use this space to prepare quick notes for each interview.</p></div></div>
+          <div class="body grid2">
+            <div><h3 style="font-family:'Fraunces',serif;color:var(--teal-mid);margin:0 0 9px">Interview 1 Notes</h3><textarea placeholder="Company, role, schedule, key points, questions..."></textarea></div>
+            <div><h3 style="font-family:'Fraunces',serif;color:var(--teal-mid);margin:0 0 9px">Interview 2 Notes</h3><textarea placeholder="Company, role, schedule, key points, questions..."></textarea></div>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer"><div><b>The Resume Chic & Co.&reg;</b> &nbsp;|&nbsp; Executive Interview Prep</div><div>Prepared for Alicia R. Hardy, Pharm.D., BC-ADM, CDCES</div></footer>
+    </div>
+  </main>
+</div>
+<div class="printbar"><button onclick="window.print()">Print / Save PDF</button></div>
+</body>
+</html>
