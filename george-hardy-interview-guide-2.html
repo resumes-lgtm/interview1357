@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>George L. Hardy, PharmD — Interview Conversation Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0d1f2d;
+    --navy-2:#123244;
+    --teal:#1c5461;
+    --teal-light:#3d7d8a;
+    --amber:#c8842a;
+    --amber-light:#e3a75a;
+    --paper:#f6f2ea;
+    --paper-2:#ede6d8;
+    --ink:#1a2229;
+    --ink-soft:#4a5761;
+    --line:#d8cfbd;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    color:var(--navy);
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:var(--teal);}
+
+  /* ---- Chart-strip header ---- */
+  .chart-header{
+    background:var(--navy);
+    color:var(--paper);
+    padding:0;
+    position:relative;
+    overflow:hidden;
+  }
+  .chart-strip{
+    display:flex;
+    border-bottom:1px solid rgba(246,242,234,0.15);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--amber-light);
+  }
+  .chart-strip span{
+    padding:8px 18px;
+    border-right:1px solid rgba(246,242,234,0.15);
+    white-space:nowrap;
+  }
+  .chart-strip span:last-child{border-right:none;}
+  .header-inner{
+    padding:40px 32px 32px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .header-eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--amber-light);
+    margin-bottom:10px;
+  }
+  .header-inner h1{
+    color:var(--white);
+    font-size:clamp(28px,4vw,42px);
+    margin:0 0 6px;
+  }
+  .header-sub{
+    color:#b9c6cd;
+    font-size:15px;
+    max-width:640px;
+  }
+  .header-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-top:24px;
+    padding-top:20px;
+    border-top:1px solid rgba(246,242,234,0.15);
+  }
+  .header-meta div{font-size:13px;color:#9fb0b8;}
+  .header-meta strong{display:block;color:var(--paper);font-size:14px;font-weight:600;margin-bottom:2px;}
+
+  /* ---- Layout ---- */
+  .layout{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:0;
+    align-items:start;
+  }
+  nav.sidebar{
+    position:sticky;
+    top:0;
+    padding:32px 16px 32px 32px;
+    align-self:start;
+    max-height:100vh;
+    overflow-y:auto;
+  }
+  nav.sidebar ol{
+    list-style:none;
+    margin:0;padding:0;
+    border-left:2px solid var(--line);
+  }
+  nav.sidebar li{margin:0;}
+  nav.sidebar a{
+    display:block;
+    padding:9px 0 9px 16px;
+    margin-left:-2px;
+    border-left:2px solid transparent;
+    font-size:13px;
+    color:var(--ink-soft);
+    text-decoration:none;
+    line-height:1.35;
+  }
+  nav.sidebar a:hover, nav.sidebar a.active{
+    border-left-color:var(--amber);
+    color:var(--navy);
+    font-weight:600;
+  }
+  nav.sidebar .rx-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    color:var(--amber);
+    display:block;
+    letter-spacing:0.06em;
+  }
+
+  main{padding:32px 32px 80px 32px;}
+
+  section.rx{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    margin-bottom:28px;
+    overflow:hidden;
+    scroll-margin-top:20px;
+  }
+  .rx-label{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:16px 24px;
+    background:var(--paper-2);
+    border-bottom:1px dashed var(--line);
+  }
+  .rx-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    font-weight:600;
+    color:var(--white);
+    background:var(--teal);
+    padding:4px 9px;
+    border-radius:3px;
+    letter-spacing:0.04em;
+  }
+  .rx-label h2{
+    margin:0;
+    font-size:20px;
+  }
+  .rx-body{padding:22px 24px 26px;}
+  .rx-body h3{font-size:15px;margin:20px 0 8px;color:var(--teal);}
+  .rx-body h3:first-child{margin-top:0;}
+  .rx-body p{margin:0 0 12px;color:var(--ink);}
+  .rx-body ul{margin:0 0 14px;padding-left:20px;}
+  .rx-body li{margin-bottom:6px;}
+
+  .callout{
+    background:var(--paper);
+    border-left:3px solid var(--amber);
+    padding:14px 18px;
+    border-radius:0 4px 4px 0;
+    margin:14px 0;
+    font-size:14.5px;
+  }
+  .callout strong{color:var(--navy);}
+
+  .script{
+    background:var(--navy-2);
+    color:#e8eef0;
+    border-radius:5px;
+    padding:16px 20px;
+    font-size:14.5px;
+    margin:10px 0 16px;
+    font-family:'IBM Plex Sans',sans-serif;
+    font-style:italic;
+    line-height:1.65;
+  }
+  .script .tag{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-style:normal;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--amber-light);
+    margin-bottom:6px;
+  }
+
+  .placeholder{
+    color:#a0480f;
+    background:#fbeee0;
+    padding:1px 5px;
+    border-radius:3px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.92em;
+  }
+
+  .star-grid{display:grid;gap:16px;}
+  .star-card{
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:16px 18px;
+    background:var(--paper);
+  }
+  .star-card h4{
+    font-family:'Fraunces',serif;
+    font-size:16px;
+    margin:0 0 4px;
+    color:var(--navy);
+  }
+  .job-tags{margin-bottom:10px;}
+  .job-tag{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:2px 8px;
+    border-radius:10px;
+    margin-right:6px;
+    font-weight:600;
+  }
+  .job-tag.j1{background:#f0dcc0;color:#8a5a17;}
+  .job-tag.j2{background:#cfe3e6;color:#1c5461;}
+  .job-tag.both{background:#dce6cf;color:#4c6b26;}
+  .star-card .steps{font-size:13.5px;}
+  .star-card .steps b{color:var(--teal);}
+
+  table.compare{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13.5px;
+    margin:8px 0 4px;
+  }
+  table.compare th{
+    text-align:left;
+    background:var(--paper-2);
+    padding:8px 10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    border-bottom:1px solid var(--line);
+  }
+  table.compare td{
+    padding:9px 10px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  table.compare tr:last-child td{border-bottom:none;}
+
+  .cheat-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  @media (max-width:640px){.cheat-grid{grid-template-columns:1fr;}}
+  .word-list{list-style:none;margin:0;padding:0;}
+  .word-list li{
+    padding:6px 0;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+  }
+  .word-list.lead li:before{content:"✓ ";color:#4c6b26;font-weight:700;}
+  .word-list.avoid li:before{content:"✕ ";color:#a0480f;font-weight:700;}
+
+  textarea.notes{
+    width:100%;
+    min-height:160px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:12px 14px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    background:var(--white);
+    color:var(--ink);
+    resize:vertical;
+  }
+
+  footer{
+    text-align:center;
+    padding:28px;
+    font-size:12px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr;}
+    nav.sidebar{position:static;max-height:none;padding:24px 24px 0;}
+    nav.sidebar ol{display:flex;flex-wrap:wrap;border-left:none;gap:4px;}
+    nav.sidebar li{}
+    nav.sidebar a{border-left:none;border-bottom:2px solid transparent;padding:6px 10px;}
+    nav.sidebar a:hover,nav.sidebar a.active{border-left:none;border-bottom-color:var(--amber);}
+    main{padding:24px 20px 60px;}
+  }
+
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header class="chart-header">
+  <div class="chart-strip">
+    <span>Rx Verified: 500+/day</span>
+    <span>MTM: 150+ CMR/wk equiv.</span>
+    <span>Licensure: FL — Active</span>
+    <span>PharmD — UF, 2014</span>
+  </div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Interview Conversation Guide</div>
+    <h1>George L. Hardy, PharmD</h1>
+    <p class="header-sub">Prep session covering two live opportunities. Built to surface where his central-fill and telehealth MTM background converts directly into value for a compounding/BHRT role and a long-term-care pharmacist role — and how to bridge the parts that don't.</p>
+    <div class="header-meta">
+      <div><strong>Target Roles</strong>Compounding/BHRT — Debary, FL &amp; LTC Pharmacist — SpecialtyRx</div>
+      <div><strong>Current Role</strong>Clinical Outbound Pharmacist, Walgreens</div>
+      <div><strong>Session Focus</strong>Full guide — all sections</div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="sidebar" aria-label="Guide sections">
+    <ol>
+      <li><a href="#fit-question"><span class="rx-tag">Rx 01</span>The Fit Question</a></li>
+      <li><a href="#opening"><span class="rx-tag">Rx 02</span>Opening</a></li>
+      <li><a href="#background"><span class="rx-tag">Rx 03</span>Explaining His Background</a></li>
+      <li><a href="#star-bank"><span class="rx-tag">Rx 04</span>STAR Story Bank</a></li>
+      <li><a href="#tough-questions"><span class="rx-tag">Rx 05</span>Toughest Questions</a></li>
+      <li><a href="#why-him"><span class="rx-tag">Rx 06</span>Why Him</a></li>
+      <li><a href="#closing"><span class="rx-tag">Rx 07</span>Closing Script</a></li>
+      <li><a href="#cheat-sheet"><span class="rx-tag">Rx 08</span>Day-Of Cheat Sheet</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <section class="rx" id="fit-question">
+      <div class="rx-label"><span class="rx-num">RX 01</span><h2>The Fit Question</h2></div>
+      <div class="rx-body">
+        <p>Neither job posting looks like George's résumé at first glance. Nearly ten years of his career sits inside a high-volume, centralized, and telehealth model — verifying scripts and running MTM calls from a desk, not standing at a compounding hood or walking a facility floor. That's the honest gap, and it shows up differently for each role:</p>
+        <table class="compare">
+          <tr><th>Role</th><th>What's genuinely new</th><th>What already transfers</th></tr>
+          <tr>
+            <td><strong>Compounding / BHRT</strong><br>Debary, FL</td>
+            <td>Hands-on sterile &amp; non-sterile compounding; USP 795/797/800 execution</td>
+            <td>Drug utilization review, dosing/interaction scrutiny, regulatory rigor, patient education on hormone-adjacent chronic conditions</td>
+          </tr>
+          <tr>
+            <td><strong>LTC Pharmacist</strong><br>SpecialtyRx</td>
+            <td>Facility/nursing-staff coordination; on-call duties; geriatric population in a residential setting</td>
+            <td>Order evaluation for drug/dose/interaction appropriateness, therapy-change recommendations to prescribers, controlled-substance and documentation discipline, geriatric pharmacotherapy as a named core qualification</td>
+          </tr>
+        </table>
+        <div class="callout"><strong>The bridge, in one line:</strong> he isn't asking either employer to take a chance on unproven clinical judgment — that part is already documented at volume. What's new is the setting it gets applied in.</div>
+        <h3>Bridge script</h3>
+        <div class="script"><span class="tag">If asked directly about the gap</span>"I'll be straight with you — I haven't stood at a compounding hood / worked inside a facility day-to-day. What I have done for almost ten years is the part that's hardest to teach: catching the interaction, the wrong dose, the therapy that doesn't fit the patient, before it becomes a problem, and doing it at a volume most pharmacists never see. <span class="placeholder">[500+ scripts/day, 90-100 calls/day]</span>. I'm confident the clinical judgment transfers — I'm here because I want to apply it somewhere <span class="placeholder">[more hands-on / more embedded with a care team]</span>."</div>
+      </div>
+    </section>
+
+    <section class="rx" id="opening">
+      <div class="rx-label"><span class="rx-num">RX 02</span><h2>Opening</h2></div>
+      <div class="rx-body">
+        <h3>30-second version</h3>
+        <div class="script"><span class="tag">Lead with substance, not credentials</span>"For the last decade I've been the pharmacist standing between a prescription and a patient — verifying over 500 orders a day for safety and appropriateness, and more recently running comprehensive medication reviews and outbound clinical calls for patients managing chronic conditions like diabetes and hypertension. I'm George Hardy, Doctor of Pharmacy out of the University of Florida, and I'm looking to bring that same level of scrutiny into a role that's more hands-on / more facility-based."</div>
+        <h3>60-second version</h3>
+        <div class="script"><span class="tag">Adds the arc</span>"I started at Walgreens in central processing in 2016, which is where you build real pattern-recognition — thousands of prescriptions a week, catching the interactions and dosing errors before they reach a patient. In 2022 I moved into their pharmacist chat and video team, counseling patients directly, and since last year I've been doing outbound clinical work: 90 to 100 calls a day, running comprehensive and targeted medication reviews through OutcomesMTM, working chronic disease management and adherence barriers one patient at a time. What ties all of it together is the same instinct — look past the label at what's actually happening with the patient. That's what I want to bring here, in a setting where I'm closer to the day-to-day of care."</div>
+      </div>
+    </section>
+
+    <section class="rx" id="background">
+      <div class="rx-label"><span class="rx-num">RX 03</span><h2>Explaining His Background, Plainly</h2></div>
+      <div class="rx-body">
+        <p>Interviewers outside the chain-pharmacy world won't automatically know what "central processing" or "OutcomesMTM" means. Translate, don't assume.</p>
+        <ul>
+          <li><strong>Central Processing Operations</strong> → "A high-volume verification hub — every prescription from a large group of stores gets checked here for safety before it's filled. I'm the last clinical check before it reaches the patient."</li>
+          <li><strong>Clinical Outbound Pharmacist / OutcomesMTM</strong> → "I run structured medication reviews by phone — going through everything a patient takes, catching gaps or risks, and coordinating with their doctor when something needs to change."</li>
+          <li><strong>Pharmacist Chat Team</strong> → "Real-time video and chat consultations — same clinical judgment as an in-person counseling window, just delivered remotely."</li>
+        </ul>
+        <h3>Fallback line if the interviewer pushes on the gap</h3>
+        <div class="script"><span class="tag">Use if pressed twice on the same gap</span>"I won't pretend the setting is the same — but the muscle is. Every one of those <span class="placeholder">[500+]</span> daily verifications is a judgment call about whether a therapy is safe and appropriate for that specific patient. That's the same judgment call this role needs, just applied where I can see it through in person."</div>
+      </div>
+    </section>
+
+    <section class="rx" id="star-bank">
+      <div class="rx-label"><span class="rx-num">RX 04</span><h2>STAR Story Bank</h2></div>
+      <div class="rx-body">
+        <p>Each story below is mapped to duties pulled directly from the postings. <span class="job-tag both">BOTH</span> stories are the highest-leverage — lead with those first.</p>
+        <div class="star-grid">
+
+          <div class="star-card">
+            <h4>1. Catching a dangerous interaction at volume</h4>
+            <div class="job-tags"><span class="job-tag both">BOTH — DUR / order evaluation</span></div>
+            <p class="steps"><b>S:</b> During a routine shift verifying <span class="placeholder">[500+]</span> prescriptions. <b>T:</b> Identify a <span class="placeholder">[drug interaction / contraindication / dosing error]</span> before it reached the patient. <b>A:</b> Flagged it, contacted the prescriber directly, proposed <span class="placeholder">[alternative therapy or dose adjustment]</span>. <b>R:</b> <span class="placeholder">[Prevented adverse event / therapy corrected same day]</span> — documented per protocol.</p>
+          </div>
+
+          <div class="star-card">
+            <h4>2. Recommending a therapy change that stuck</h4>
+            <div class="job-tags"><span class="job-tag j2">LTC — recommend therapy changes to physician/facility staff</span></div>
+            <p class="steps"><b>S:</b> Comprehensive Medication Review flagged a patient on <span class="placeholder">[medication/condition, e.g. a diabetic patient with an adherence gap]</span>. <b>T:</b> Get a practical, evidence-based recommendation in front of the prescriber. <b>A:</b> Documented the clinical rationale, called the prescriber, proposed <span class="placeholder">[specific change]</span>. <b>R:</b> Change adopted; <span class="placeholder">[adherence or outcome improved — pull from his 150+ CMR/wk track record]</span>.</p>
+          </div>
+
+          <div class="star-card">
+            <h4>3. Geriatric / chronic disease education under time pressure</h4>
+            <div class="job-tags"><span class="job-tag j2">LTC — geriatric pharmacotherapy, medical history/clinical data</span><span class="job-tag j1">BHRT — patient education on hormone-adjacent conditions</span></div>
+            <p class="steps"><b>S:</b> Outbound call with a patient managing <span class="placeholder">[diabetes / hypertension / hyperlipidemia]</span>, hesitant or confused about their regimen. <b>T:</b> Get to understanding and adherence inside a short call. <b>A:</b> Used plain-language education, addressed <span class="placeholder">[specific barrier — cost, side effect fear, confusion]</span>, handled the objection calmly. <b>R:</b> Patient <span class="placeholder">[committed to the regimen / scheduled follow-up / resolved concern]</span>.</p>
+          </div>
+
+          <div class="star-card">
+            <h4>4. Working inside a strict compliance framework</h4>
+            <div class="job-tags"><span class="job-tag j1">Compounding — USP 795/797/800</span><span class="job-tag j2">LTC — controlled substance register</span></div>
+            <p class="steps"><b>S:</b> Daily work under federal/state pharmacy law, controlled-substance rules, and HIPAA in a high-volume environment. <b>T:</b> Zero tolerance for a compliance miss while still hitting turnaround-time targets. <b>A:</b> Built a personal documentation discipline — <span class="placeholder">[specific habit, e.g. dual-checking controlled items, logging every intervention same-shift]</span>. <b>R:</b> <span class="placeholder">[Clean audit record / zero compliance flags over X years]</span> — the same rigor USP 795/797/800 and controlled-drug logs demand, just a different rulebook.</p>
+          </div>
+
+          <div class="star-card">
+            <h4>5. Learning a new system fast</h4>
+            <div class="job-tags"><span class="job-tag j1">Compounding — "willingness to learn"</span></div>
+            <p class="steps"><b>S:</b> Moved from central processing into the pharmacist chat/video platform in 2022, then into OutcomesMTM-based outbound work in 2025 — two full workflow changes inside one employer. <b>T:</b> Get productive on unfamiliar tools and a new care model quickly. <b>A:</b> <span class="placeholder">[Ramp-up approach — self-training, shadowing, etc.]</span>. <b>R:</b> Now running <span class="placeholder">[150+ CMRs and ~40 TMRs weekly]</span> — evidence he adapts to new clinical systems on a real timeline, not just in theory.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="rx" id="tough-questions">
+      <div class="rx-label"><span class="rx-num">RX 05</span><h2>Toughest Likely Questions</h2></div>
+      <div class="rx-body">
+        <h3>Built around the fit gap</h3>
+        <ul>
+          <li>"You've spent your whole career centralized or remote — what makes you think you'll like being on your feet in a facility / at a hood?" <em>(Have a genuine, specific answer ready — not just "I'm ready for a change.")</em></li>
+          <li>"Walk me through your compounding experience." <em>(For Job 1 — don't overstate; pivot immediately to DUR/safety rigor and eagerness to be trained.)</em></li>
+          <li>"How would you handle a 2 a.m. on-call from a facility nurse about a resident's medication?" <em>(For Job 2 — draw on his chat-team experience triaging urgent concerns remotely.)</em></li>
+          <li>"You're used to a script telling you what to check. Facility/BHRT work is less structured — how do you handle ambiguity?"</li>
+          <li>"Why now, after ten years in one system?"</li>
+        </ul>
+        <h3>Standard but expect them</h3>
+        <ul>
+          <li>Tell me about a time you disagreed with a prescriber.</li>
+          <li>How do you prioritize when everything feels urgent?</li>
+          <li>What does patient-centered care mean to you, day to day?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rx" id="why-him">
+      <div class="rx-label"><span class="rx-num">RX 06</span><h2>Why Him</h2></div>
+      <div class="rx-body">
+        <p>The honest, defensible case — not oversold:</p>
+        <ul>
+          <li><strong>Volume nobody else brings.</strong> 500+ verifications a day and 150+ Comprehensive Medication Reviews a week isn't a claim, it's a documented run rate. Most candidates for these roles haven't seen this many patient profiles.</li>
+          <li><strong>Geriatric and chronic disease pharmacotherapy is a named core qualification</strong>, not an inferred skill — directly relevant to an LTC population and to hormone-adjacent chronic condition management in BHRT.</li>
+          <li><strong>Communication under resistance is already proven.</strong> 90-100 outbound calls a day means he's spent a year getting hesitant, skeptical, or frustrated people to engage — the same skill a facility nurse or a new BHRT patient will need from him.</li>
+          <li><strong>Regulatory instinct is built in, not bolted on.</strong> HIPAA, controlled substances, federal/state pharmacy law — he's operated inside strict frameworks for a decade. USP 795/797/800 is a new rulebook, not a new discipline.</li>
+          <li><strong>He's shown he can re-platform fast.</strong> Two internal role changes at Walgreens in four years, each requiring new systems and a new care model, both landed successfully.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rx" id="closing">
+      <div class="rx-label"><span class="rx-num">RX 07</span><h2>Closing Script</h2></div>
+      <div class="rx-body">
+        <div class="script"><span class="tag">Ends on a forward question, not a trail-off</span>"I want to be direct about where I'm coming from — I know the setting here is different from where I've spent the last decade. But what I bring is real: catching the interaction that shouldn't slip through on <span class="placeholder">[500+]</span> checks a day, getting a hesitant patient to actually change behavior on <span class="placeholder">[90-100]</span> calls a day, and doing both inside a strict regulatory framework the whole time. I'm not looking to coast into something familiar — I want to put that judgment to work somewhere I'm closer to the patient. What would the first 90 days in this role actually look like for someone coming in with my background?"</div>
+      </div>
+    </section>
+
+    <section class="rx" id="cheat-sheet">
+      <div class="rx-label"><span class="rx-num">RX 08</span><h2>Day-Of Cheat Sheet</h2></div>
+      <div class="rx-body">
+
+        <h3>Before you walk in</h3>
+        <ul>
+          <li>Arrive 10-15 minutes early — no earlier. Use the extra minutes in the car, not the lobby, to run the 60-second opening once out loud.</li>
+          <li>Bring: 2 printed copies of the résumé, a copy of the active FL pharmacist license, a notepad and pen, and the 2 questions for the interviewer written down so nerves can't erase them.</li>
+          <li>Phone fully silent, not just on vibrate — set it before getting out of the car.</li>
+          <li>If it's the Debary compounding role: expect a working pharmacy environment — closed-toe shoes, hair tied back, minimal jewelry, no strong fragrance.</li>
+          <li>If it's the SpecialtyRx LTC role: expect it may be a straightforward office/facility interview — standard professional dress is enough.</li>
+        </ul>
+
+        <h3>Numbers to have cold</h3>
+        <div class="callout">Say these out loud twice before going in — under pressure, round numbers are what disappear first.
+          <ul style="margin-top:8px;">
+            <li><strong>500+</strong> prescriptions verified per day</li>
+            <li><strong>90–100</strong> outbound clinical calls per day</li>
+            <li><strong>150+</strong> Comprehensive Medication Reviews per week</li>
+            <li><strong>~40</strong> Targeted Medication Reviews per week</li>
+            <li><strong>Nearly 10 years</strong> at Walgreens, three roles: central processing (2016) → chat/video team (2022) → outbound clinical (2025)</li>
+            <li>PharmD, University of Florida, <strong>May 2014</strong></li>
+          </ul>
+        </div>
+
+        <h3>If it turns into the Job 1 conversation (Compounding / BHRT)</h3>
+        <ul>
+          <li>Open the gap yourself before they have to ask — see the Rx 01 bridge script.</li>
+          <li>Lead with USP-adjacent language: "regulatory rigor," "attention to detail," "willingness to be trained on the technical side."</li>
+          <li>Don't guess at compounding specifics he doesn't know — say plainly he's new to sterile/non-sterile technique and ask what the training path looks like.</li>
+        </ul>
+
+        <h3>If it turns into the Job 2 conversation (LTC / SpecialtyRx)</h3>
+        <ul>
+          <li>Lead with the DUR/order-evaluation overlap — this is his strongest direct match of the two roles.</li>
+          <li>Have a real answer ready for the on-call question (see Rx 05) — draw on the chat-team triage experience.</li>
+          <li>If asked about facility/nursing coordination specifically, be honest it's new, then pivot to prescriber-communication reps from daily verification work.</li>
+        </ul>
+
+        <div class="cheat-grid">
+          <div>
+            <h3>Lead with</h3>
+            <ul class="word-list lead">
+              <li>Judgment, verification, safety check</li>
+              <li>Patient-centered, adherence, barrier</li>
+              <li>Documented, evidence-based</li>
+              <li>Ready to learn, coachable</li>
+              <li>Volume, consistency, track record</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Avoid</h3>
+            <ul class="word-list avoid">
+              <li>"Just verifying scripts" (undersells the clinical judgment)</li>
+              <li>"I've never done that" (bridge instead — see Rx 01)</li>
+              <li>Over-apologizing for the gap</li>
+              <li>Chain-pharmacy jargon without translation</li>
+              <li>Vague claims — always land on a number or outcome</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Questions to ask the interviewer</h3>
+        <p style="font-size:13.5px;color:var(--ink-soft);margin-top:-4px;">Pick 2-3 based on which role this is. These are built to sound like someone thinking about how to actually do the job well — not filler questions.</p>
+
+        <h4 style="font-family:'Fraunces',serif;font-size:14.5px;color:var(--navy);margin:14px 0 6px;">If it's the Compounding / BHRT role (Debary)</h4>
+        <ul>
+          <li>"What's a typical shift's compounding volume look like — roughly how many BHRT preparations versus weight-loss preparations, and how does that split between sterile and non-sterile?"</li>
+          <li>"How is the cleanroom set up — how many hoods, and is non-sterile compounding physically separated from sterile?"</li>
+          <li>"For someone strong on the clinical/verification side but newer to hands-on compounding, what does the onboarding ramp look like before I'd be compounding independently?"</li>
+          <li>"Is there a second-pharmacist check on every batch, or is verification split by volume?"</li>
+          <li>"You mentioned expanding operations — is this part-time schedule expected to grow toward full-time, and on what kind of timeline has that happened for others?"</li>
+        </ul>
+
+        <h4 style="font-family:'Fraunces',serif;font-size:14.5px;color:var(--navy);margin:14px 0 6px;">If it's the LTC role (SpecialtyRx)</h4>
+        <ul>
+          <li>"Walk me through what happens between a facility submitting an order and it going out the door — how many hands does it pass through, and where does a pharmacist's review sit in that flow?"</li>
+          <li>"How many facilities would I be supporting, and is coverage assigned by facility or by task across the pharmacist team?"</li>
+          <li>"When a therapy-change recommendation goes to a prescriber, what's the typical turnaround, and how is that followed up on if it goes quiet?"</li>
+          <li>"How often does on-call actually get activated, and what does a typical on-call call look like — urgent clinical questions, or more logistics?"</li>
+          <li>"What system handles order processing and documentation, and how much of the day is spent in that system versus on the phone with nursing staff?"</li>
+        </ul>
+
+        <h4 style="font-family:'Fraunces',serif;font-size:14.5px;color:var(--navy);margin:14px 0 6px;">Works for either</h4>
+        <ul>
+          <li>"What's the biggest workflow or safety bottleneck the team is dealing with right now that this hire is meant to help with?"</li>
+          <li>"What does success in the first 90 days actually look like, day to day — not the title, the tasks?"</li>
+        </ul>
+
+        <h3>If nerves spike mid-answer</h3>
+        <div class="script"><span class="tag">Reset, don't rush</span>"That's a good question — give me one second to think about the clearest example." A three-second pause reads as composure, not hesitation. Then go straight to the closest STAR story from Rx 04.</div>
+
+        <h3>Right after the interview</h3>
+        <ul>
+          <li>Send a same-day thank-you note referencing one specific thing discussed — not a generic template.</li>
+          <li>Note anything asked that wasn't covered here, so the guide can be sharpened for the next round.</li>
+        </ul>
+
+        <h3>Live notes — prep session</h3>
+        <textarea class="notes" placeholder="Jot down real numbers, story details, and interviewer-specific notes here as they come up..."></textarea>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>Prepared for internal interview prep use — not for public distribution.</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var links = document.querySelectorAll('nav.sidebar a');
+  var sections = Array.prototype.map.call(links, function (a) {
+    return document.querySelector(a.getAttribute('href'));
+  });
+  function onScroll() {
+    var pos = window.scrollY + 120;
+    var activeIndex = 0;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i] && sections[i].offsetTop <= pos) {
+        activeIndex = i;
+      }
+    }
+    for (var j = 0; j < links.length; j++) {
+      links[j].classList.toggle('active', j === activeIndex);
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
+</script>
+
+</body>
+</html>
